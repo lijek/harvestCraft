@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "harvestcraft",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Harvest Craft",
+  "description": "This mod adds some tweaks to farming.",
   "authors": [
-    "Me!"
+    "lijek"
   ],
   "contact": {
     "homepage": "https://glass-launcher.net/",
@@ -14,19 +14,21 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/harvestcraft/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.glasslauncher.example.ExampleMod"
+    "stationmod": [
+      "net.glasslauncher.harvestcraft.HarvestCraft"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "harvestcraft.mixins.json"
   ],
 
   "depends": {
-    "minecraft": "1.0.0-beta.7.3"
+    "fabricloader": "*",
+    "minecraft": "1.0.0-beta.7.3",
+    "stationloader": "*"
   }
 }
