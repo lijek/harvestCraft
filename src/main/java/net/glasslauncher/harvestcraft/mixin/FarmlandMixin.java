@@ -14,10 +14,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Farmland.class)
 public class FarmlandMixin {
 
-    @Inject(at=@At("HEAD"), method="method_1560")
+    @Inject(at=@At("HEAD"), method="method_1560", cancellable = true)
     public void method_1560(Level arg, int i, int j, int k, EntityBase arg1, CallbackInfo callbackInfo) {
         if(arg1.method_1373() && HarvestCraft.sneakingProtectsCrops)
-            return;
+            callbackInfo.cancel();
     }
 
 }
