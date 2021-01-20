@@ -1,4 +1,4 @@
-package net.glasslauncher.harvestcraft;
+package lijek.harvestcraft;
 
 import net.modificationstation.stationloader.api.common.config.Category;
 import net.modificationstation.stationloader.api.common.config.Configuration;
@@ -9,6 +9,7 @@ public class HarvestCraft implements StationMod {
 
     public static boolean rightClickHarvest = true;
     public static boolean sneakingProtectsCrops = true;
+    public static boolean walkingAndJumpingDestroysCrops = true;
     public static boolean alwaysDropOneSeed = true;
     public static int wheatHarvestMultiplier = 1;
     public static int seedHarvestMultiplier = 1;
@@ -20,6 +21,7 @@ public class HarvestCraft implements StationMod {
         Category general = config.getCategory("general");
         rightClickHarvest = general.getProperty("rightClickHarvest", rightClickHarvest).getBooleanValue();
         sneakingProtectsCrops = general.getProperty("sneakingProtectsCrops", sneakingProtectsCrops).getBooleanValue();
+        walkingAndJumpingDestroysCrops = general.getProperty("walkingAndJumpingDestroysCrops", walkingAndJumpingDestroysCrops).getBooleanValue();
         alwaysDropOneSeed = general.getProperty("alwaysDropOneSeed", alwaysDropOneSeed).getBooleanValue();
         wheatHarvestMultiplier = general.getProperty("wheatHarvestMultiplier", wheatHarvestMultiplier).getIntValue();
         seedHarvestMultiplier = general.getProperty("seedHarvestMultiplier", seedHarvestMultiplier).getIntValue();

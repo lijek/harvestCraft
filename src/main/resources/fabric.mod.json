@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "https://glass-launcher.net/",
-    "sources": "https://github.com/calmilamsy/BIN-fabric-example-mod"
+    "sources": "https://github.com/lijek/harvestCraft"
   },
 
   "license": "CC0-1.0",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "stationmod": [
-      "net.glasslauncher.harvestcraft.HarvestCraft"
+      "lijek.harvestcraft.HarvestCraft"
     ]
   },
   "mixins": [

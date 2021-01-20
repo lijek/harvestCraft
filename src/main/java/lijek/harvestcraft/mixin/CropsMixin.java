@@ -1,20 +1,14 @@
-package net.glasslauncher.harvestcraft.mixin;
+package lijek.harvestcraft.mixin;
 
-import net.glasslauncher.harvestcraft.HarvestCraft;
-import net.minecraft.block.BlockBase;
+import lijek.harvestcraft.HarvestCraft;
 import net.minecraft.block.Crops;
 import net.minecraft.block.Plant;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.Item;
 import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.item.ItemBase;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.level.Level;
-import org.checkerframework.checker.units.qual.A;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Random;
 
@@ -30,7 +24,7 @@ public abstract class CropsMixin extends Plant {
         float var9 = level.rand.nextFloat() * var8 + (1.0F - var8) * 0.5F;
         float var10 = level.rand.nextFloat() * var8 + (1.0F - var8) * 0.5F;
         float var11 = level.rand.nextFloat() * var8 + (1.0F - var8) * 0.5F;
-        Item var12 = new Item(level, (double)((float)x + var9), (double)((float)y + var10), (double)((float)z + var11), new ItemInstance(item, count));
+        Item var12 = new Item(level, (float)x + var9, (float)y + var10, (float)z + var11, new ItemInstance(item, count));
         var12.pickupDelay = 10;
         level.spawnEntity(var12);
     }
@@ -49,7 +43,6 @@ public abstract class CropsMixin extends Plant {
             if(HarvestCraft.alwaysDropOneSeed)
                 spawnItemEntity(level, x, y, z, ItemBase.seeds, 1);
         }
-        return;
     }
 
     @Override
